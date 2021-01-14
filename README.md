@@ -1,4 +1,4 @@
-# Gyrovector Hyperbolic space in Blender with add-ons
+# Gyrovector Hyperbolic geometry in Blender with add-ons
 
 ## Description
 
@@ -26,31 +26,46 @@ Gyrovector script for animation nodes add-on is also stored in this repository. 
 ### sverchok
 
 After loading script in SNLite script node, the nodes will show its parameters. Set the parameters with connecting nodes.
-![Image of gyrovectorscript node](./images/gyrovector_script_node_screen_shot.png)
+
+#### gyrovector_edges.py  
+<img src="./images/gyrovector_edges_script_node_screen_shot.png" alt="Image of gyrovectorscript node for edges" width="400">
+
+Parameters:  
+  - In
+    - verts_in:&emsp; Vertices of the source object
+    - edges_in:&emsp; Edges of the source object
+    - s_param:&emsp; fixed positive number
+    - division:&emsp; number of edge division
+  - Out
+    - verts_out:&emsp; Vertices
+    - edges_out:&emsp; Edges
+
+#### gyrovector_polygons.py  
+ <img src="./images/gyrovector_polygons_script_node_screen_shot.png" alt="Image of gyrovectorscript node for polygons" width="400">  
 
 Parameters:
+  - In
+    - verts_in:&emsp; Vertices of the source object
+    - faces_in:&emsp; Faces of the source object
+    - s_param:&emsp; fixed positive number
+    - division:&emsp; number of edge division
+  - Out
+    - verts_out:&emsp; Vertices
+    - edges_out:&emsp; Edges
+    - faces_out:&emsp; Faces
 
-In
-- verts_in:&emsp; Vertices of a source object
-- edges_in:&emsp; Edges of a source object
-- s_param:&emsp; fixed positive number
-- division:&emsp; number of edge division
-
-Out
-- verts_out:&emsp; Vertices
-- edges_out:&emsp; Edges
-
+<br/><br/>
 This images are some node-tree examples.
 
 Result edges are splitted at the original vertices positions, so you need to use 'Merge by Distance' node to remove double vertices.
 ![Example of the node tree](./images/gyrovector_script_node_tree_screen_shot.png)
 
-And when creating polygons, source meshes are needed to be triangulated in advance with 'Triangulate mesh' node.
+And when creating polygons, source meshes are needed to **be triangulated in advance** with 'Triangulate mesh' node.
 
 ![Example of the node tree 2](./images/gyrovector_hyperbolic_icosahedron_screen_shot.png)
 ### animation nodes
 
-The way to use the node is similar to the sverchok's node. So the details in animation nodes are skipped.
+Usage is similar to the sverchok's node. So the details in animation nodes are skipped.
 
 ## Requirements
 

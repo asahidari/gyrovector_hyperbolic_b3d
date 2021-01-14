@@ -58,6 +58,7 @@ Parameters:
 This images are some node-tree examples.
 
 Result edges are splitted at the original vertices positions, so you need to use 'Merge by Distance' node to remove double vertices.
+
 ![Example of the node tree](./images/gyrovector_script_node_tree_screen_shot.png)
 
 And when creating polygons, source meshes are needed to **be triangulated in advance** with 'Triangulate mesh' node.
@@ -65,7 +66,7 @@ And when creating polygons, source meshes are needed to **be triangulated in adv
 ![Example of the node tree 2](./images/gyrovector_hyperbolic_icosahedron_screen_shot.png)
 ### animation nodes
 
-Usage is similar to the sverchok's node. So the details in animation nodes are skipped.
+Usage for animation nodes is similar to the sverchok's node. So the details in animation nodes are skipped.
 
 ## Requirements
 
